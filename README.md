@@ -47,51 +47,74 @@ This project tackles the problem with:
 
 ## ⚙️ Project Pipeline
 Raw Data
+
 │
+
 ▼
 
 EDA & Analysis          # notebooks/01_eda.ipynb
+
 │
+
 ▼
 
 Preprocessing           # notebooks/02_preprocessing.ipynb
+
 ├── Scale Amount + Time
+
 ├── Train/Test split (80/20 stratified)
+
 └── SMOTE on train set only
+
 │
+
 ▼
 
 Model Training          # notebooks/03_modeling.ipynb
+
 ├── Logistic Regression (baseline)
+
 ├── Random Forest
+
 ├── XGBoost ← best model
+
 └── LightGBM
+
 │
+
 ▼
 
 Experiment Tracking     # MLflow (localhost:5000)
+
 │
+
 ▼
 
 SHAP Explainability     # notebooks/04_shap.ipynb
-├── Global feature importance
-├── Beeswarm plot
-├── Per-transaction waterfall plots
-└── Dependence plots
-│
-▼
 
+├── Global feature importance
+
+├── Beeswarm plot
+
+├── Per-transaction waterfall plots
+
+└── Dependence plots
+
+│
+
+▼
 Streamlit Dashboard     # app/app.py
 
 ---
 
 ## 📈 Model Comparison
 
-                       F1  ROC_AUC  PR_AUc
-LogisticRegression  0.1066   0.9730  0.7557
-Random Forest       0.5663   0.9872  0.8325
-XGBoost             0.7688   0.9849  0.8655
-LightGBM            0.4315   0.9792  0.7623
+| Model | F1 Score | ROC-AUC | PR-AUC |
+|-------|----------|---------|--------|
+| Logistic Regression | 1.066 | 0.9730 | 0.7557 |
+| Random Forest | 0.5663 | 0.9872 | 0.8325 |
+| XGBoost ✅ | 0.7688 | 0.9849 | 0.8655 |
+| LightGBM | 0.4315 | 0.9792 | 0.7623 |
 
 ## 🏆 Why XGBoost Won
 
