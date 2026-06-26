@@ -1,0 +1,8 @@
+venv/
+data/creditcard.csv
+data/preprocessed/
+models/
+__pycache__/
+mlruns/
+*.pyc
+.ipynb_checkpoints/
